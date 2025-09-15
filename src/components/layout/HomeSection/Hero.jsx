@@ -14,7 +14,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen flex items-center overflow-hidden">
+    <section className="relative w-full h-[65vh] sm:h-[75vh] md:h-[85vh] lg:h-screen flex items-center overflow-hidden">
       {/* Fallback Image */}
       {!videoLoaded && (
         <img
@@ -39,10 +39,10 @@ const Hero = () => {
 
       {/* Left-aligned Content */}
       <div className="relative z-10 px-6 md:px-12 lg:px-24 text-light flex flex-col justify-center h-full max-w-4xl">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 text-left leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 text-left leading-tight">
           CodemindAI - Your AI & Web Development Partner
         </h1>
-        <p className="text-lg md:text-2xl mb-6 text-left leading-relaxed">
+        <p className="text-base sm:text-lg md:text-2xl mb-6 text-left leading-relaxed">
           We deliver <span className="font-semibold">smart, scalable websites</span> and{" "}
           <span className="font-semibold">AI-powered learning solutions</span> that turn your ideas into{" "}
           <span className="font-semibold">real digital experiences</span>.
