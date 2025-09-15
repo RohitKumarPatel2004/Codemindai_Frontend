@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaCheckCircle, FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 // Images
 import Client1 from "../../../assets/mem1.png";
@@ -73,16 +74,25 @@ const TrustSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* LEFT */}
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold leading-snug text-primary">
-              Your Trusted Partner in <br />
-              <span className="text-secondary">Digital Transformation</span>
-            </h2>
-            <p className="text-lg md:text-xl text-secondary leading-relaxed">
-              Innovating with <span className="font-semibold">Code</span>, Empowering with{" "}
-              <span className="font-semibold">AI</span>. <br />
-              Together, we build <span className="font-semibold">smart, scalable</span> &{" "}
-              <span className="font-semibold">future-ready</span> solutions.
-            </p>
+         <motion.h2
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-primary text-center md:text-left"
+>
+  Your Trusted Partner in{" "}
+  <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+    Digital Transformation
+  </span>
+</motion.h2>
+
+<p className="text-sm sm:text-base md:text-lg lg:text-xl text-secondary leading-relaxed mt-3 text-center md:text-left">
+  Innovating with <span className="font-semibold">Code</span>, Empowering with{" "}
+  <span className="font-semibold">AI</span>. <br className="hidden sm:block" />
+  Together, we build <span className="font-semibold">smart, scalable</span> &{" "}
+  <span className="font-semibold">future-ready</span> solutions.
+</p>
+
 
             <span className="flex items-center gap-2 bg-green-200 text-green-900 px-4 py-2 rounded-full font-semibold shadow-md w-fit">
               <FaCheckCircle /> Trusted by our clients
